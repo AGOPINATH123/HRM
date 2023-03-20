@@ -111,7 +111,7 @@ public class HRMDaoImplementation implements HRMDao {
 	}
 	@Override
 	public List<EmployeeBean> search() {
-		List<EmployeeBean> listOfEmployee = new ArrayList<>();
+		List<EmployeeBean> listOfEmployee = new ArrayList<EmployeeBean>();
 		String query="select EmployeeId,FirstName,FatherName,Gender,EmailId,MobileNo,AadharNo,SchoolName,TenthPassedOut,IntermeadiateCollegeName,InterPassedOut,GraduationDetails,GraduationPassedOut,Branch,University,CompanyName,Role,NoticePeriod,Location,Experience,CurrentCtc,ExpectedCtc,PermanatAddress,LocalAddress from employeebean";
 		
 		try {
@@ -165,7 +165,7 @@ public class HRMDaoImplementation implements HRMDao {
 			return null;
 		}
 		
-		List<EmployeeBean> listOfEmployee = new ArrayList<>();
+		List<EmployeeBean> listOfEmployee = new ArrayList<EmployeeBean>();
 		EmployeeBean employeeBean = null;
 		String query="select * from employeebean where employeeId='"+param +"' or firstname='"+param +"' or currentctc='"+param +"'";
 		log.info("search param value="+query);
@@ -235,7 +235,7 @@ public class HRMDaoImplementation implements HRMDao {
 	public List<EmployeeBean> searchManager(String role1)
 	{
 		EmployeeBean employeeBean=null;
-		List<EmployeeBean> listOfEmployee = new ArrayList<>();
+		List<EmployeeBean> listOfEmployee = new ArrayList<EmployeeBean>();
 	
 		String query="select * from employeebean where Role='Project Manager'";
 			try
@@ -265,7 +265,7 @@ public class HRMDaoImplementation implements HRMDao {
 	public List<EmployeeBean> searchManagerEmp(String manager)
 	{
 		EmployeeBean employeeBean=null;
-		List<EmployeeBean> listOfEmployee = new ArrayList<>();
+		List<EmployeeBean> listOfEmployee = new ArrayList<EmployeeBean>();
 	
 		String query="select * from employeebean where Manager=?";
 			try
